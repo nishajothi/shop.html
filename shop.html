@@ -1,0 +1,473 @@
+<html>
+<head>
+  <title>JUST RECYCLE PRODUCTS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(2, 2, 14);
+      padding: 30px;
+    }
+
+    .menu-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .item-details {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .item-description {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .item-price {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .item-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 4px;
+      object-fit: cover;
+      margin-left: 10px;
+    }
+
+    .quantity-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .quantity-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      background-color: #eee;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .add-to-cart-button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cart-container {
+      margin-top: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .cart-item-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .cart-item-quantity {
+      margin-right: 10px;
+    }
+
+    .cart-item-remove {
+      color: red;
+      cursor: pointer;
+    }
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 4px;
+      z-index: 9999;
+    }
+
+    .make-payment-button {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    .make-payment-button img {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .net-total {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>JUST RECYCLE SHOPPING MART </h1>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">GLASS PAINTED LAMP</h2>
+        <img src="https://www.imagicart.in/wp-content/uploads/Hand-painted-glass-bottle-lamp-colourful-1.jpg" alt="GLASS PAINTED LAMP" class="item-image">
+        <p class="item-description">BEAUTIFULLY CRAFTED BOTTLE WITH LAMP MADE FROM RECYCLED GLASS BOTTLE.</p>
+        <p class="item-price">Cr.300</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">SMART WATCH</h2>
+        <img src="https://www.jiomart.com/images/product/original/rvjcjvpob0/swadesi-stuff-t500-black-smart-watch-for-men-women-and-kids-with-calling-feature-and-fitness-heart-rate-activity-tracker-waterproof-body-step-and-calorie-counter-sports-activity-tracker-touchscreen-product-images-rvjcjvpob0-0-202212291403.jpg?im=Resize=(1000,1000)" alt="SMART WATCH" class="item-image">
+        <p class="item-description">A WATER RESISTENT WRIST BAND WITH BLUETOOTH CONNECTIVITY</p>
+        <p class="item-price">Cr.1275</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">WALLET</h2>
+        <img src="https://www.wildhorn.in/cdn/shop/products/IMG_0469.jpg?v=1610013361" alt="WALLET" class="item-image">
+        <p class="item-description">RECYLED WALLET OF FINE COTTON MADE FROM LORRY CURTAIN</p>
+        <p class="item-price">Cr.400</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">CALCULATOR</h2>
+        <img src="https://beconmy.s3.ap-southeast-1.amazonaws.com/maru_store/bf68040cc0d1b6974b8f0a07b0c6b2ea.jpg" alt="CALCULATOR" class="item-image">
+        <p class="item-description">NON- PROGRAMMABLE SCIENTIFIC CALCULATOR</p>
+        <p class="item-price">Cr.375</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">WOMEN COTTON JUMPER</h2>
+        <img src="https://images.teemill.com/jyhqncg4tvgjvpcue9oslw5avncnvbp1fqyt5dgflfvllp46.jpeg.webp?w=1080&v=2" alt="WOMEN COTTON JUMPER" class="item-image">
+        <p class="item-description">RECYLED JUMPER IS MADE OF 50% RECYCLED POST-CONSUMER ORGANIC COTTON.</p>
+        <p class="item-price">Cr.550</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">CHARGER</h2>
+        <img src="https://m.media-amazon.com/images/I/61BmOixtr6L._AC_UF1000,1000_QL80_.jpg" alt="CHARGER" class="item-image">
+        <p class="item-description">TYPE C WALL ADAPTER COMPATIBLE FOR SAMSUNG</p>
+        <p class="item-price">Cr.499</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">ECO-CRAFT KIT</h2>
+        <img src="https://rukminim2.flixcart.com/image/832/832/kz4gh3k0/art-craft-kit/p/u/z/4-eco-craft-recycle-craft-kit-20-recycle-craft-projects-original-imagb7ftghpzfzpf.jpeg?q=70" alt="ECO-CRAFT KIT" class="item-image">
+        <p class="item-description">IT CONSISTS OF 20+ RECYCLE CRAFT PROJECTS</p>
+        <p class="item-price">Cr.250</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">POWER BANK</h2>
+        <img src="https://i.pinimg.com/564x/c4/fc/3b/c4fc3bdfedad530147a95c3816a2b3d7.jpg" alt="POWER BANK" class="item-image">
+        <p class="item-description">PREMIUM NANO POWER BANK WITH SUPER FAST CHARGING FACILITY</p>
+        <p class="item-price">Cr.490</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">RED BROCADE RECYCLED RUG</h2>
+        <img src="https://worldartcommunity.com/images/item-images/item_image_cff1c980fa3f2af29bcf89791afafe8d.jpg" alt=" RED BROCADE RECYCLED RUG" class="item-image">
+        <p class="item-description">RECYLED WALLET OF FINE COTTON MADE FROM LORRY CURTAIN</p>
+        <p class="item-price">Cr.699</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+    
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">BLUETOOTH HEADPHONE</h2>
+        <img src="https://www.boat-lifestyle.com/cdn/shop/products/eb8e0fbd-c412-48b3-9c91-5b49ddf35800.png?v=1673002681" alt="BLUETOOTH HEADPHONE" class="item-image">
+        <p class="item-description">HEADPHONE WITH 30 HRS OF PLAY TIME</p>
+        <p class="item-price">Cr.355</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">PAPER DIARY</h2>
+        <img src="https://saffronsouk.com/images/detailed/612/upcycled-printed-fabric-and-paper-diary-642419-1.webp?t=1677013018" alt="PAPER DIARY" class="item-image">
+        <p class="item-description">BEAUTIFULLY UPCYCLED FABRIC AND PAPER DIARY</p>
+        <p class="item-price">Cr.250</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">TRIMMER</h2>
+        <img src="https://images.philips.com/is/image/philipsconsumer/16223389e358476a91d7ae790094206e?$jpglarge$&wid=960" alt="TRIMMER" class="item-image">
+        <p class="item-description">POWER ADAPT TECHNOLOGY FOR PRECISE TRIMMING WITH 120 MINS RUN TIME.</p>
+        <p class="item-price">Cr.280</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">CROP TOP</h2>
+        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/3/d/tr:w-540,/3d8c2ccNK_NAKDX00006176_1.jpg?rnd=20200526195200" alt="CROP TOP" class="item-image">
+        <p class="item-description">RECYLED CROPPED SMOCKED TOP-WHITE WITH RED FLOWER</p>
+        <p class="item-price">Cr.399</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">LCD WRITING PAD</h2>
+        <img src="https://149612049.v2.pressablecdn.com/wp-content/uploads/2022/12/lcd-tablet-multi-color.webp" alt="LCD WRITING PAD" class="item-image">
+        <p class="item-description">PORTABLE LCD WRITING TABLET OF 10 INCHES</p>
+        <p class="item-price">Cr.700</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-details">
+        <h2 class="item-name">METALLIC CLUTCH</h2>
+        <img src="https://lemillindia.com/cdn/shop/products/MET-CL-BBKSL_1080x.jpg?v=1665487889" alt="METALLIC CLUTCH" class="item-image">
+        <p class="item-description">UPCYCLED CLUTCH IS MADE FROM RECYCLED PLASTIC BAGS AND RECYCLED INDUSTRY PACKAGING</p>
+        <p class="item-price">Cr.299</p>
+      </div>
+      <div class="quantity-container">
+        <div class="quantity-button quantity-decrease">-</div>
+        <input type="text" class="quantity-input" value="1">
+        <div class="quantity-button quantity-increase">+</div>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+
+
+    <div class="cart-container">
+      <h1>Cart</h1>
+      <div class="cart-items"></div>
+      <div class="net-total">
+        Net Total: <span id="net-total-amount">Cr.0</span>
+      </div>
+      <a href="payment.html" class="make-payment-button">
+        <span>Make Payment</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/4827/4827568.png" alt="Make Payment" class="payment-icon">
+      </a>
+    </div>
+
+    <div class="notification"></div>
+
+    <script>
+      const quantityDecreaseButtons = document.querySelectorAll('.quantity-button.quantity-decrease');
+      const quantityIncreaseButtons = document.querySelectorAll('.quantity-button.quantity-increase');
+      const quantityInputs = document.querySelectorAll('.quantity-input');
+      const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+      const cartItemsContainer = document.querySelector('.cart-items');
+      const netTotalAmount = document.getElementById('net-total-amount');
+      const notification = document.querySelector('.notification');
+
+      // Add event listeners to quantity decrease buttons
+      quantityDecreaseButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          const currentValue = parseInt(quantityInputs[index].value);
+          if (currentValue > 1) {
+            quantityInputs[index].value = currentValue - 1;
+          }
+        });
+      });
+
+      // Add event listeners to quantity increase buttons
+      quantityIncreaseButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          const currentValue = parseInt(quantityInputs[index].value);
+          quantityInputs[index].value = currentValue + 1;
+        });
+      });
+
+      // Add event listeners to add to cart buttons
+      addToCartButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          const itemName = button.parentElement.querySelector('.item-name').textContent;
+          const itemPrice = button.parentElement.querySelector('.item-price').textContent;
+          const itemQuantity = parseInt(button.parentElement.querySelector('.quantity-input').value);
+          const itemTotal =parseInt(itemPrice.replace('Cr.', '')) * itemQuantity;
+
+          const cartItem = document.createElement('div');
+          cartItem.classList.add('cart-item');
+          cartItem.innerHTML = `
+            <div class="cart-item-details">
+              <span class="cart-item-name">${itemName}</span>
+              <span class="cart-item-quantity">Quantity: ${itemQuantity}</span>
+            </div>
+            <span class="cart-item-price">Cr.${itemTotal}</span>
+            <span class="cart-item-remove">Remove</span>
+          `;
+
+          cartItemsContainer.appendChild(cartItem);
+
+          // Add event listener to remove item from cart
+          const removeButton = cartItem.querySelector('.cart-item-remove');
+          removeButton.addEventListener('click', () => {
+            cartItem.remove();
+            updateNetTotal();
+          });
+
+          updateNetTotal();
+          showNotification('Item added to cart');
+        });
+      });
+
+      // Function to calculate and update the net total amount
+      function updateNetTotal() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        let netTotal = 0;
+
+        cartItems.forEach((cartItem) => {
+          const itemPrice = cartItem.querySelector('.cart-item-price').textContent;
+          const itemTotal = parseInt(itemPrice.replace('Cr.', ''));
+          netTotal += itemTotal;
+        });
+
+        netTotalAmount.textContent = `Cr.${netTotal}`;
+      }
+
+      // Show notification
+      function showNotification(message) {
+        notification.textContent = message;
+        notification.style.display = 'block';
+
+        setTimeout(() => {
+          notification.style.display = 'none';
+        }, 2000);
+      }
+    </script>
+  </div>
+</body>
+</html>
